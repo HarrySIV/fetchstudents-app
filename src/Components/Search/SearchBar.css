@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+input {
+   width: 100%;
+   border: none;
+   color: rgba(0, 0, 0, 0.4);
+   padding: 0.5rem;
+   font-weight: 100;
+}
+
+input:focus {
+   outline: none;
+}

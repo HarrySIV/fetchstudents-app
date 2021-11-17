@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+h2 {
+   font-weight: 700;
+   display: inline-flex;
+   font-size: xx-large;
+   text-transform: uppercase;
+   margin: 0 0 0.5rem;
+}
