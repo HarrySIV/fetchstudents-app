@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/fetchstudents-app/static/css/main.90b6f119.chunk.css",
+    "main.js": "/fetchstudents-app/static/js/main.d1c2b954.chunk.js",
+    "main.js.map": "/fetchstudents-app/static/js/main.d1c2b954.chunk.js.map",
+    "runtime-main.js": "/fetchstudents-app/static/js/runtime-main.d2be12fc.js",
+    "runtime-main.js.map": "/fetchstudents-app/static/js/runtime-main.d2be12fc.js.map",
+    "static/js/2.d7af5499.chunk.js": "/fetchstudents-app/static/js/2.d7af5499.chunk.js",
+    "static/js/2.d7af5499.chunk.js.map": "/fetchstudents-app/static/js/2.d7af5499.chunk.js.map",
+    "index.html": "/fetchstudents-app/index.html",
+    "static/css/main.90b6f119.chunk.css.map": "/fetchstudents-app/static/css/main.90b6f119.chunk.css.map",
+    "static/js/2.d7af5499.chunk.js.LICENSE.txt": "/fetchstudents-app/static/js/2.d7af5499.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2be12fc.js",
+    "static/js/2.d7af5499.chunk.js",
+    "static/css/main.90b6f119.chunk.css",
+    "static/js/main.d1c2b954.chunk.js"
+  ]
+}
