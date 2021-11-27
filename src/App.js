@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./Components/Search/SearchBar";
 import PrintStudentInfo from "./Components/PrintStudentInfo";
+import axios from 'axios';
 
 function App() {
   //set lifted state for searchBar
@@ -10,22 +11,33 @@ function App() {
     //fetch database to create new array of students to display
   useEffect(() => {
     function fetchStudentInfo() {
-      fetch('https://api.hatchways.io/assessment/students')
-        .then(response => response.json())
-        .then(data => {
-          const transformedStudentData = data.students.map(studentData => {
-            return {
-              imgURL: studentData.pic,
-              fullName: `${studentData.firstName} ${studentData.lastName}`,
-              email: studentData.email,
-              company: studentData.company,
-              skill: studentData.skill,
-              grades: studentData.grades
-            }
-          });
-          setStudents(transformedStudentData);
-          setFilteredStudents(transformedStudentData);
-        });
+      axios.get('https://api.hatchways.io/assessment/students')
+      .then(res => {
+        console.log(res);
+        const transformedStudentData = res.data.students.map(studentData => {
+        return {
+          imgURL: studentData.pic,
+          fullName: `${studentData.firstName} ${studentData.lastName}`,
+          email: studentData.email,
+          company: studentData.company,
+          skill: studentData.skill,
+          grades: studentData.grades
+        }})
+        setStudents(transformedStudentData);
+        setFilteredStudents(transformedStudentData);
+      })
+      .catch(function (error) {
+        if (error.response) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log('Error', error.message);
+        }
+        console.log(error.config);
+      });
     }
   fetchStudentInfo();
   }, []);
@@ -46,7 +58,7 @@ function App() {
         onChange={searchQueryHandler} />
       <hr />
       <PrintStudentInfo 
-        students={filteredStudents}  
+        students={filteredStudents} 
         onChange={setStudents} 
         />
     </div>

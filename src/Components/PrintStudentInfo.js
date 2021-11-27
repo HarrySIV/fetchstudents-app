@@ -12,7 +12,9 @@ let  PrintStudentInfo = props => {
     <ul>
       {props.students.map(student => {
       return (
-        <div className="item">
+        <div 
+        className="item"
+        key={student.id}>
           <PrintPicture imgURL={student.imgURL} />
           <div className="text">
             <PrintFullName fullName={student.fullName} className="name" />
