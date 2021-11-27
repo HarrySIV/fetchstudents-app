@@ -13,7 +13,6 @@ function App() {
     function fetchStudentInfo() {
       axios.get('https://api.hatchways.io/assessment/students')
       .then(res => {
-        console.log(res);
         const transformedStudentData = res.data.students.map(studentData => {
         return {
           imgURL: studentData.pic,
